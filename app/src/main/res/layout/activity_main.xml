@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52595D"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+<!--    #52595D-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linHorBtn"
+        android:layout_alignParentTop="true"
+        android:background="#E2B6B9B7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:elevation="10dp"
+                android:src="@drawable/extract"
+                app:strokeWidth="2dp" />
+
+            <ImageView
+                android:id="@+id/inputImageBtn"
+                android:layout_width="55dp"
+                android:elevation="10dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="-48dp"
+                app:srcCompat="@drawable/ic_baseline_add_circle_24" />
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Recognized Text"
+                android:layout_marginLeft="5dp"
+                android:textColor="#B74949"
+                android:background="#D7E7E9"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/recognizedTexEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:minHeight="340dp"
+                android:background="#D7E7E9"
+                android:gravity="top"
+                android:hint="Your result will appear here"
+                android:textColor="@color/teal_700"
+                android:textColorHint="@color/black"
+                android:textSize="16sp" />
+            </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linHorBtn">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recognizeTextBtn"
+            android:layout_marginEnd="5dp"
+            android:text="Recognize Text"
+            android:elevation="20dp"
+            app:cornerRadius="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#560D2F"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classifyBtn"
+            android:layout_marginEnd="5dp"
+            android:text="Classify Text"
+            app:cornerRadius="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#560D2F"
+            android:elevation="20dp"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LanguageBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:textAlignment="viewStart"
+        android:clickable="true"
+        android:backgroundTint="#52595D"
+        android:src="@drawable/ic_baseline_language_24"
+        />
+
+
+
+</RelativeLayout>
